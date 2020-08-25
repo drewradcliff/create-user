@@ -1,0 +1,13 @@
+<div>
+    {% if request.user.is_authenticated %}
+    <a href='/logout/'>logout</a>
+    {% else %}
+    <a href='/login/'>login</a> | 
+    <a href='/signup/'>signup</a>
+    {% endif %}
+</div>
+<h1>Username: {{ request.user.username }}</h1>
+<h1>Display Name: {{ request.user.name }}</h1>
+<h4>Homepage: {{ request.user.homepage }}</h4>
+<h4>Age: {{ request.user.age }}</h4>
+{{ settings }}
